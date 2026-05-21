@@ -25,6 +25,7 @@ class ClusterResponse(BaseModel):
     """
     text_preview: str = Field(..., description="A short preview of the input text processed.")
     cluster_id: int = Field(..., description="The predicted cluster assignment (0-19).")
+    cluster_name: str = Field(..., description="The human-readable semantic name of the cluster.")
     experiment_used: str = Field(..., description="The active experiment registry key used for inference.")
     status: str = Field(default="success", description="API execution status flag.")
 
