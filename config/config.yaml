@@ -1,0 +1,111 @@
+# config/config.yaml
+
+paths:
+  data_dir: "data/processed"
+  models_dir: "models/saved_models"
+  leaderboard_csv: "outputs/clustering_leaderboard.csv"
+  log_file: "outputs/training_history.log"
+
+experiments:
+  # --- TRACK A: K-MEANS ---
+  A-01:
+    embedding: "tfidf"
+    reduction: "none"
+    clustering: "kmeans"
+    n_clusters: 20
+  A-02:
+    embedding: "bert"
+    reduction: "none"
+    clustering: "kmeans"
+    n_clusters: 20
+  A-03:
+    embedding: "tfidf"
+    reduction: "svd"
+    reduction_dim: 50
+    clustering: "kmeans"
+    n_clusters: 20
+  A-04:
+    embedding: "tfidf"
+    reduction: "umap"
+    reduction_dim: 10
+    clustering: "kmeans"
+    n_clusters: 20
+  A-05:
+    embedding: "bert"
+    reduction: "pca"
+    reduction_dim: 50
+    clustering: "kmeans"
+    n_clusters: 20
+  A-06:
+    embedding: "bert"
+    reduction: "umap"
+    reduction_dim: 10
+    clustering: "kmeans"
+    n_clusters: 20
+
+  # --- TRACK B: HIERARCHICAL ---
+  B-01:
+    embedding: "tfidf"
+    reduction: "none"
+    clustering: "hierarchical"
+    n_clusters: 20
+  B-02:
+    embedding: "tfidf"
+    reduction: "svd"
+    reduction_dim: 50
+    clustering: "hierarchical"
+    n_clusters: 20
+  B-03:
+    embedding: "tfidf"
+    reduction: "umap"
+    reduction_dim: 10
+    clustering: "hierarchical"
+    n_clusters: 20
+  B-04:
+    embedding: "bert"
+    reduction: "none"
+    clustering: "hierarchical"
+    n_clusters: 20
+  B-05:
+    embedding: "bert"
+    reduction: "pca"
+    reduction_dim: 50
+    clustering: "hierarchical"
+    n_clusters: 20
+  B-06:
+    embedding: "bert"
+    reduction: "umap"
+    reduction_dim: 10
+    clustering: "hierarchical"
+    n_clusters: 20
+
+  # --- TRACK C: GMM ---
+  C-01:
+    embedding: "tfidf"
+    reduction: "svd"
+    reduction_dim: 50
+    clustering: "gmm"
+    n_clusters: 20
+  C-02:
+    embedding: "tfidf"
+    reduction: "umap"
+    reduction_dim: 10
+    clustering: "gmm"
+    n_clusters: 20
+  C-03:
+    embedding: "bert"
+    reduction: "none"
+    clustering: "gmm"
+    n_clusters: 20
+  C-04:
+    embedding: "bert"
+    reduction: "pca"
+    reduction_dim: 50
+    clustering: "gmm"
+    n_clusters: 20
+  C-05:
+    embedding: "bert"
+    reduction: "umap"
+    reduction_dim: 10
+    clustering: "gmm"
+    n_clusters: 20
