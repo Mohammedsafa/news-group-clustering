@@ -44,11 +44,10 @@ To ensure strict tracking and clinical alignment of Unsupervised models, the pro
 ## 🛠️ 4. Tech Stack & Architecture
 
 * **Runtime Environment:** Python 3.12.2 (Managed via `pyenv`)
-* **OS Target:** Pop!_OS (NVIDIA-Optimized Linux Environment)
 * **API Framework:** FastAPI with `uvicorn` ASGI Server
 * **Dimensionality Reduction:** `umap-learn`
 * **Clustering & Analytics:** `scikit-learn` & `pandas`
-* **Deep Learning & Embeddings:** `torch` & `sentence-transformers`
+* **Embeddings:** `sentence-transformers`
 * **Configuration Utility:** PyYAML (Structured `config.yaml` processing)
 
 ---
