@@ -1,0 +1,11 @@
+fastapi==0.136.1
+joblib==1.5.2
+numpy==2.4.6
+pandas==3.0.3
+pydantic==2.13.4
+PyYAML==6.0.3
+scikit_learn==1.8.0
+scipy==1.17.1
+sentence_transformers==5.4.1
+umap_learn==0.5.12
+uvicorn==0.47.0
