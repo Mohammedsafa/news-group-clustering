@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+shared_dev_env/
+.git/
+data/*
+!data/.gitkeep
+outputs/*
+!outputs/.gitkeep
+models/*
+!models/.gitkeep
+.DS_Store
