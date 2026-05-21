@@ -52,12 +52,9 @@ class DimensionalityReducer:
             print(f"[Reduction Layer] Initialized TruncatedSVD to contract space down to {self.n_components}D...")
         
         elif self.reduction_type == "umap":
-            self.reducer_object = umap.UMAP(
-                n_components=self.n_components, 
-                n_neighbors=15, 
-                min_dist=0.1, 
-                random_state=42
-            )
+            self.reducer_object = umap.UMAP(n_components=self.n_components,n_jobs=1, transform_seed=42,
+                                        metric='cosine', random_state=42, n_neighbors=15)
+            
             print(f"[Reduction Layer] Initialized UMAP to contract space down to {self.n_components}D Manifold...")
             
         else:

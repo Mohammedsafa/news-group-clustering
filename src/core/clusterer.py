@@ -37,7 +37,7 @@ class ClusteringEngine:
 
         if self.algorithm == "kmeans":
             print(f"[Clustering Layer] Initializing K-Means with K={self.n_clusters}...")
-            self.clusterer_object = KMeans(n_clusters=self.n_clusters, init='k-means++', random_state=42)
+            self.clusterer_object = KMeans(n_clusters=self.n_clusters, random_state=42, n_init=5)
             
             self.clusterer_object.fit(X_train)
             train_preds = self.clusterer_object.labels_
