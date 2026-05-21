@@ -4,8 +4,8 @@ from fastapi import FastAPI, APIRouter, HTTPException, Depends
 from fastapi.responses import RedirectResponse
 import json
 
-from api.schemas import ClusterRequest, ClusterResponse, BulkClusterRequest, BulkClusterResponse
-from api.pipeline_server import LiveInferenceServer
+from src.api.schemas import ClusterRequest, ClusterResponse, BulkClusterRequest, BulkClusterResponse
+from src.api.pipeline_server import LiveInferenceServer
 
 
 app = FastAPI(
